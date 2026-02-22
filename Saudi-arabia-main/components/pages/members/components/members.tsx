@@ -97,15 +97,6 @@ export default function MembersPage() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-12">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-10 text-center">
-          <h1 className="text-3xl font-semibold tracking-tight">
-            GitHub Members
-          </h1>
-          <p className="text-gray-400 text-sm mt-2">
-            Browse through public GitHub profiles
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {users.map((user) => (
             <MembersCard key={user.id} user={user} />
