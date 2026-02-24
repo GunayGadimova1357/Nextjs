@@ -29,10 +29,10 @@ export default function Destenations() {
 
     if (isMobile || isTablet) {
         return (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 px-5">
                 {
                     destenations.map((destination) => (
-                        <Link href={destination.href}  // <a href={destination.href}>
+                        <Link href={destination.href}
                             key={destination.id}
                         >
                             <DestinationCard
@@ -54,7 +54,7 @@ export default function Destenations() {
                 description="Explore the enchanting landscapes of saudi Arabia, from
                             the breathtaking deserts to the stunning coastal shores."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+            <div className="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
                 {
                     destenations.map((destination, index) => (
                         <Link href={destination.href} key={destination.id}>
@@ -67,6 +67,12 @@ export default function Destenations() {
                 }
 
 
+            </div>
+
+            <div className="text-right mt-8 px-10">
+                <button className="text-white text-sm font-medium underline underline-offset-4 hover:text-gray-300 transition-colors">
+                    See More
+                </button>
             </div>
         </section>
     )

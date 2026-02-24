@@ -1,4 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
+import SectionHeader from "@/components/pages/components/section-header";
 import MembersCard from "./members-card";
 
 interface GitHubUser {
@@ -97,6 +100,12 @@ export default function MembersPage() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-12">
       <div className="max-w-7xl mx-auto">
+        <div className="mb-10 md:mb-14">
+          <SectionHeader
+            title="Saudi, a kingdom that inspires"
+            description="A uniquely Saudi experience awaits in winter"
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {users.map((user) => (
             <MembersCard key={user.id} user={user} />
